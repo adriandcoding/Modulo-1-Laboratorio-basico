@@ -1,55 +1,38 @@
-/* Ejercicio 3: Barra de Navegación */
+section {
+  margin: 6rem;
+}
 .barra-nav {
-  background-color: #333;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #0b655b;
 }
-
-.marca {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
 .enlaces {
   display: flex;
-  gap: 1rem;
+  justify-content: space-around;
 }
 
 .enlaces a {
   color: white;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  text-align: center;
+  padding: 1rem;
+  transition: background-color 0.3s ease;
+  width: 100%;
 }
 
-.boton-menu {
-  display: none;
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1.5rem;
-  cursor: pointer;
+.enlaces a:hover {
+  background-color: #104b45;
 }
 
 @media (max-width: 768px) {
-  .boton-menu {
-    display: block;
+  .barra-nav {
+    flex-direction: column;
+    align-items: center;
   }
 
   .enlaces {
-    display: none;
-    width: 100%;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    padding: 1rem;
-  }
-
-  .enlaces.activo {
     display: flex;
+    flex-direction: column;
+  }
+  .enlaces a {
+    width: auto;
   }
 }
