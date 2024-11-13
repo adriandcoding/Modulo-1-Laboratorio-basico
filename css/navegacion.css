@@ -1,0 +1,55 @@
+/* Ejercicio 3: Barra de Navegación */
+.barra-nav {
+  background-color: #333;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.marca {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.enlaces {
+  display: flex;
+  gap: 1rem;
+}
+
+.enlaces a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+.boton-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .boton-menu {
+    display: block;
+  }
+
+  .enlaces {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    padding: 1rem;
+  }
+
+  .enlaces.activo {
+    display: flex;
+  }
+}

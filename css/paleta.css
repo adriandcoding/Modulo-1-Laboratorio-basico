@@ -1,0 +1,40 @@
+/* Ejercicio 1: Paleta de Colores */
+:root {
+  --color-base: #3498db;
+  --oscuro-1: #2980b9;
+  --oscuro-2: #2472a4;
+  --oscuro-3: #1f648e;
+  --oscuro-4: #195578;
+  --claro-1: #5dade2;
+  --claro-2: #85c1e9;
+  --claro-3: #aed6f1;
+  --claro-4: #d6eaf8;
+}
+
+.paleta-colores {
+  display: flex;
+  padding: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.caja-color {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.oscuro-4 { background-color: var(--oscuro-4); }
+.oscuro-3 { background-color: var(--oscuro-3); }
+.oscuro-2 { background-color: var(--oscuro-2); }
+.oscuro-1 { background-color: var(--oscuro-1); }
+.base { background-color: var(--color-base); }
+.claro-1 { background-color: var(--claro-1); }
+.claro-2 { background-color: var(--claro-2); }
+.claro-3 { background-color: var(--claro-3); }
+.claro-4 { background-color: var(--claro-4); color: #333; }
