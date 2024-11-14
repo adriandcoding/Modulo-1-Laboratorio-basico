@@ -1,17 +1,120 @@
-/* Ejercicio 1: Paleta de Colores */
 :root {
-  --color-base: #3498db;
-  --oscuro-1: #2980b9;
-  --oscuro-2: #2472a4;
-  --oscuro-3: #1f648e;
-  --oscuro-4: #195578;
-  --claro-1: #5dade2;
-  --claro-2: #85c1e9;
-  --claro-3: #aed6f1;
-  --claro-4: #d6eaf8;
+  /*azul */
+  .paleta-colores1 .oscuro-4 {
+    background-color: hsl(210, 50%, 20%);
+    color: hsl(210, 10%, 95%);
+  }
+  .paleta-colores1 .oscuro-3 {
+    background-color: hsl(210, 40%, 30%);
+    color: hsl(210, 20%, 90%);
+  }
+  .paleta-colores1 .oscuro-2 {
+    background-color: hsl(210, 40%, 40%);
+    color: hsl(210, 30%, 85%);
+  }
+  .paleta-colores1 .oscuro-1 {
+    background-color: hsl(210, 40%, 50%);
+    color: hsl(210, 40%, 80%);
+  }
+  .paleta-colores1 .base {
+    background-color: hsl(210, 30%, 60%);
+    color: hsl(210, 40%, 20%);
+  }
+  .paleta-colores1 .claro-1 {
+    background-color: hsl(210, 30%, 70%);
+    color: hsl(210, 40%, 25%);
+  }
+  .paleta-colores1 .claro-2 {
+    background-color: hsl(210, 30%, 80%);
+    color: hsl(210, 40%, 30%);
+  }
+  .paleta-colores1 .claro-3 {
+    background-color: hsl(210, 30%, 90%);
+    color: hsl(210, 40%, 35%);
+  }
+  .paleta-colores1 .claro-4 {
+    background-color: hsl(210, 30%, 98%);
+    color: hsl(210, 50%, 40%);
+  }
+  /*verde */
+  .paleta-colores2 .oscuro-4 {
+    background-color: hsl(160, 50%, 20%);
+    color: hsl(160, 10%, 95%);
+  }
+  .paleta-colores2 .oscuro-3 {
+    background-color: hsl(160, 40%, 30%);
+    color: hsl(160, 20%, 90%);
+  }
+  .paleta-colores2 .oscuro-2 {
+    background-color: hsl(160, 40%, 40%);
+    color: hsl(160, 30%, 85%);
+  }
+  .paleta-colores2 .oscuro-1 {
+    background-color: hsl(160, 40%, 50%);
+    color: hsl(160, 40%, 80%);
+  }
+  .paleta-colores2 .base {
+    background-color: hsl(160, 30%, 60%);
+    color: hsl(160, 40%, 20%);
+  }
+  .paleta-colores2 .claro-1 {
+    background-color: hsl(160, 30%, 70%);
+    color: hsl(160, 40%, 25%);
+  }
+  .paleta-colores2 .claro-2 {
+    background-color: hsl(160, 30%, 80%);
+    color: hsl(160, 40%, 30%);
+  }
+  .paleta-colores2 .claro-3 {
+    background-color: hsl(160, 30%, 90%);
+    color: hsl(160, 40%, 35%);
+  }
+  .paleta-colores2 .claro-4 {
+    background-color: hsl(160, 30%, 98%);
+    color: hsl(160, 50%, 40%);
+  }
+  /* terracota */
+  .paleta-colores3 .oscuro-4 {
+    background-color: hsl(15, 50%, 25%);
+    color: hsl(15, 10%, 95%);
+  }
+  .paleta-colores3 .oscuro-3 {
+    background-color: hsl(15, 50%, 35%);
+    color: hsl(15, 20%, 90%);
+  }
+  .paleta-colores3 .oscuro-2 {
+    background-color: hsl(15, 50%, 45%);
+    color: hsl(15, 30%, 85%);
+  }
+  .paleta-colores3 .oscuro-1 {
+    background-color: hsl(15, 50%, 55%);
+    color: hsl(15, 40%, 80%);
+  }
+  .paleta-colores3 .base {
+    background-color: hsl(15, 40%, 70%);
+    color: hsl(15, 40%, 20%);
+  }
+  .paleta-colores3 .claro-1 {
+    background-color: hsl(15, 30%, 80%);
+    color: hsl(15, 40%, 25%);
+  }
+  .paleta-colores3 .claro-2 {
+    background-color: hsl(15, 30%, 90%);
+    color: hsl(15, 40%, 30%);
+  }
+  .paleta-colores3 .claro-3 {
+    background-color: hsl(15, 30%, 95%);
+    color: hsl(15, 40%, 35%);
+  }
+  .paleta-colores3 .claro-4 {
+    background-color: hsl(15, 20%, 98%);
+    color: hsl(15, 50%, 40%);
+  }
 }
 
-.paleta-colores {
+.paleta-colores1,
+.paleta-colores2,
+.paleta-colores3 {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
@@ -28,33 +131,5 @@
   color: white;
   text-align: center;
   border-radius: 8px;
-}
-
-.oscuro-4 {
-  background-color: var(--oscuro-4);
-}
-.oscuro-3 {
-  background-color: var(--oscuro-3);
-}
-.oscuro-2 {
-  background-color: var(--oscuro-2);
-}
-.oscuro-1 {
-  background-color: var(--oscuro-1);
-}
-.base {
-  background-color: var(--color-base);
-}
-.claro-1 {
-  background-color: var(--claro-1);
-}
-.claro-2 {
-  background-color: var(--claro-2);
-}
-.claro-3 {
-  background-color: var(--claro-3);
-}
-.claro-4 {
-  background-color: var(--claro-4);
-  color: #333;
+  box-shadow: 0px 4px 6px rgba(0, 0, 3, 3.1);
 }
