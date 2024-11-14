@@ -12,4 +12,4 @@ Para cambiar a paleta2, usa:
 <link href="css/paleta2.css" rel="stylesheet">
 
 
-🔄 Simplemente intercambia paleta1 y paleta2 en el link según el tema deseado. ¡Listo!
+🔄 Simplemente intercambia paleta1 y paleta2 en el link según el tema deseado. Gracias!!!!!
