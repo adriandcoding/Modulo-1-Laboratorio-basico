@@ -1,0 +1,109 @@
+.theme-1 {
+  --color-dark-4: rgb(10.0920502092, 38.1255230126, 56.9079497908);
+  --color-dark-3: rgb(17.7740585774, 67.1464435146, 100.2259414226);
+  --color-dark-2: rgb(25.4560669456, 96.1673640167, 143.5439330544);
+  --color-dark-1: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+  --color-base: #3498db;
+  --color-light-1: rgb(95.3179916318, 173.9790794979, 226.6820083682);
+  --color-light-2: rgb(138.6359832636, 195.9581589958, 234.3640167364);
+  --color-light-3: rgb(181.9539748954, 217.9372384937, 242.0460251046);
+  --color-light-4: rgb(225.2719665272, 239.9163179916, 249.7280334728);
+}
+
+.theme-2 {
+  --color-dark-4: rgb(77.4657534247, 15.8904109589, 9.5342465753);
+  --color-dark-3: rgb(122.8767123288, 25.2054794521, 15.1232876712);
+  --color-dark-2: rgb(168.2876712329, 34.5205479452, 20.7123287671);
+  --color-dark-1: rgb(213.698630137, 43.8356164384, 26.301369863);
+  --color-base: #e74c3c;
+  --color-light-1: rgb(236.5890410959, 117.6849315068, 105.4109589041);
+  --color-light-2: rgb(242.1780821918, 159.3698630137, 150.8219178082);
+  --color-light-3: rgb(247.7671232877, 201.0547945205, 196.2328767123);
+  --color-light-4: rgb(253.3561643836, 242.7397260274, 241.6438356164);
+}
+
+.theme-3 {
+  --color-dark-4: rgb(1.6478873239, 7.3521126761, 4.0563380282);
+  --color-dark-3: rgb(10.985915493, 49.014084507, 27.0422535211);
+  --color-dark-2: rgb(20.323943662, 90.676056338, 50.0281690141);
+  --color-dark-1: rgb(29.661971831, 132.338028169, 73.014084507);
+  --color-base: #27ae60;
+  --color-light-1: rgb(54.0422535211, 209.9577464789, 119.8732394366);
+  --color-light-2: rgb(95.7042253521, 219.2957746479, 147.8873239437);
+  --color-light-3: rgb(137.3661971831, 228.6338028169, 175.9014084507);
+  --color-light-4: rgb(179.0281690141, 237.9718309859, 203.9154929577);
+}
+
+.palette-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.color-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.color-box-dark-4 {
+  background-color: var(--color-dark-4);
+  color: #f1f1f1;
+}
+
+.color-box-dark-3 {
+  background-color: var(--color-dark-3);
+  color: #f1f1f1;
+}
+
+.color-box-dark-2 {
+  background-color: var(--color-dark-2);
+  color: #f9f9f9;
+}
+
+.color-box-dark-1 {
+  background-color: var(--color-dark-1);
+  color: #fdfdfd;
+}
+
+.color-box-base {
+  background-color: var(--color-base);
+  color: #ffffff;
+}
+
+.color-box-light-1 {
+  background-color: var(--color-light-1);
+  color: #333;
+}
+
+.color-box-light-2 {
+  background-color: var(--color-light-2);
+  color: #222;
+}
+
+.color-box-light-3 {
+  background-color: var(--color-light-3);
+  color: #111;
+}
+
+.color-box-light-4 {
+  background-color: var(--color-light-4);
+  color: #000;
+}
+
+/*# sourceMappingURL=style.css.map */

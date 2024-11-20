@@ -1,0 +1,100 @@
+$color-base-theme1: #f13cbe;
+$color-base-theme2: #8f1a9f;
+$color-base-theme3: #11813f;
+
+@mixin generate-palette($color-base) {
+  $dark-4: darken($color-base, 40%);
+  $dark-3: darken($color-base, 30%);
+  $dark-2: darken($color-base, 20%);
+  $dark-1: darken($color-base, 10%);
+  $light-1: lighten($color-base, 10%);
+  $light-2: lighten($color-base, 20%);
+  $light-3: lighten($color-base, 30%);
+  $light-4: lighten($color-base, 40%);
+
+  --color-dark-4: #{$dark-4};
+  --color-dark-3: #{$dark-3};
+  --color-dark-2: #{$dark-2};
+  --color-dark-1: #{$dark-1};
+  --color-base: #{$color-base};
+  --color-light-1: #{$light-1};
+  --color-light-2: #{$light-2};
+  --color-light-3: #{$light-3};
+  --color-light-4: #{$light-4};
+}
+
+.theme-1 {
+  @include generate-palette($color-base-theme1);
+}
+.theme-2 {
+  @include generate-palette($color-base-theme2);
+}
+.theme-3 {
+  @include generate-palette($color-base-theme3);
+}
+
+.palette-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif; // Cambia la fuente aquí
+}
+
+.color-box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 32px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25), 0 2px 4px rgba(0, 0, 0, 0.15); // Nuevo box-shadow
+  transition: transform 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 4px 8px rgba(0, 0, 0, 0.2); // Nuevo box-shadow al hover
+  }
+}
+
+.color-box-dark-4 {
+  background-color: var(--color-dark-4);
+  color: #f1f1f1;
+}
+.color-box-dark-3 {
+  background-color: var(--color-dark-3);
+  color: #f1f1f1;
+}
+.color-box-dark-2 {
+  background-color: var(--color-dark-2);
+  color: #f9f9f9;
+}
+.color-box-dark-1 {
+  background-color: var(--color-dark-1);
+  color: #fdfdfd;
+}
+.color-box-base {
+  background-color: var(--color-base);
+  color: #ffffff;
+}
+.color-box-light-1 {
+  background-color: var(--color-light-1);
+  color: #333;
+}
+.color-box-light-2 {
+  background-color: var(--color-light-2);
+  color: #222;
+}
+.color-box-light-3 {
+  background-color: var(--color-light-3);
+  color: #111;
+}
+.color-box-light-4 {
+  background-color: var(--color-light-4);
+  color: #000;
+}
