@@ -1,6 +1,25 @@
 $color-base-theme1: #f13cbe;
 $color-base-theme2: #8f1a9f;
 $color-base-theme3: #11813f;
+$theme2-box-shadow: 0 4px 6px rgba(241, 60, 190, 0.1), 0 1px 3px rgba(241, 60, 190, 0.08);
 
 @use 'main';
+
+.theme-1 {
+  @include main.generate-palette($color-base-theme1);
+  .color-box {
+    box-shadow: $theme2-box-shadow;
+    &:hover {
+      box-shadow: 0 7px 14px rgba(241, 60, 190, 0.15), 0 3px 6px rgba(241, 60, 190, 0.1);
+    }
+  }
+}
+
+.theme-2 {
+  @include main.generate-palette($color-base-theme2);
+}
+
+.theme-3 {
+  @include main.generate-palette($color-base-theme3);
+}
 
