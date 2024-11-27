@@ -1,7 +1,12 @@
-$border-radius: 32px;
+$border-radius-theme1: 32px;
+$border-radius-theme2: 16px;
+$border-radius-theme3: 8px;
 $box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
 $box-shadow-hover: 0 7px 14px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);
-$font-family: "Roboto", sans-serif;
+
+$font-family-theme1: 'Roboto', sans-serif;
+$font-family-theme2: 'Open Sans', sans-serif;
+$font-family-theme3: 'Lato', sans-serif;
 
 @mixin generate-palette($color-base) {
   $dark-4: darken($color-base, 40%);
@@ -31,7 +36,6 @@ $font-family: "Roboto", sans-serif;
   flex-wrap: wrap;
   gap: 1rem;
   padding: 2rem;
-  font-family: $font-family;
 }
 
 .color-box {
@@ -43,13 +47,10 @@ $font-family: "Roboto", sans-serif;
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
   transition: transform 0.3s, box-shadow 0.3s;
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: $box-shadow-hover;
   }
 }
 
