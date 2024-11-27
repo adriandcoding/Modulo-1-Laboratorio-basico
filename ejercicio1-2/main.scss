@@ -99,7 +99,6 @@ $font-family: "Poppins", sans-serif;
   color: #000;
 }
 
-// Clases de tema
 .theme-1 {
   @include generate-palette($color-base-theme1);
 }
