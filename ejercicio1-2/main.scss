@@ -1,19 +1,17 @@
 @import "_style2";
 @import "_mixin";
 
-// Centrar el título y mejorar su apariencia
+
 h1 {
   text-align: center;
   margin: 50px 0;
   color: $base-color-1;
   font-size: 2em;
 }
-
-// Estilos globales para contenedores usando Flexbox
 .container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; // Centramos las cajas en un contenedor
+  justify-content: center; 
   margin-bottom: 50px;
   gap: 20px;
   padding: 20px;
@@ -22,7 +20,6 @@ h1 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-// Estilos para cada caja dentro de los contenedores
 .box {
   flex: 1 0 150px;
   height: 150px;
@@ -42,18 +39,17 @@ h1 {
   -o-border-radius: $border-radius1;
 }
 
-// Animación al pasar el ratón sobre las cajas
 .box:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-// Definición de colores base para cada contenedor
+
 $container-1-color: $base-color-1;
 $container-2-color: $base-color-2;
 $container-3-color: $base-color-3;
 
-// Aplicar colores al container-1
+
 .container-1 {
   .darken-4 { @include darken-color($container-1-color, 40%); }
   .darken-3 { @include darken-color($container-1-color, 30%); }
@@ -66,7 +62,7 @@ $container-3-color: $base-color-3;
   .lighten-4 { @include lighten-color($container-1-color, 40%); }
 }
 
-// Aplicar colores al container-2
+
 .container-2 {
   .darken-4 { @include darken-color($container-2-color, 40%); }
   .darken-3 { @include darken-color($container-2-color, 30%); }
@@ -79,7 +75,7 @@ $container-3-color: $base-color-3;
   .lighten-4 { @include lighten-color($container-2-color, 40%); }
 }
 
-// Aplicar colores al container-3
+
 .container-3 {
   .darken-4 { @include darken-color($container-3-color, 40%); }
   .darken-3 { @include darken-color($container-3-color, 30%); }
@@ -91,7 +87,7 @@ $container-3-color: $base-color-3;
   .lighten-3 { @include lighten-color($container-3-color, 30%); }
   .lighten-4 { @include lighten-color($container-3-color, 40%); }
 }
-// Definición de gradientes de color para el texto
+
 $dark-text-color: #333; 
 $light-text-color: #fff; 
 
