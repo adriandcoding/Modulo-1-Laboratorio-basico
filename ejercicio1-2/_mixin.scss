@@ -1,0 +1,9 @@
+// Mixin para oscurecer un color
+@mixin darken-color($color, $amount) {
+  background-color: darken($color, $amount);
+}
+
+// Mixin para aclarar un color
+@mixin lighten-color($color, $amount) {
+  background-color: lighten($color, $amount);
+}

@@ -1,43 +1,144 @@
-@import "style1";
+@import "_style2";
+@import "_mixin";
 
-h1{
+// Centrar el título y mejorar su apariencia
+h1 {
   text-align: center;
-  margin: 100px 200px;
+  margin: 50px 0;
   color: $base-color-1;
+  font-size: 2em;
 }
+
 // Estilos globales para contenedores usando Flexbox
 .container {
   display: flex;
-  flex-wrap: wrap; // Permitir que los elementos dentro del contenedor fluyan y se envuelvan
-  justify-content: space-between; // Distribuir espacio entre los elementos
-  margin-bottom: 30px;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center; // Centramos las cajas en un contenedor
+  margin-bottom: 50px;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 // Estilos para cada caja dentro de los contenedores
 .box {
-  flex: 1 1 100px; // Permitir que las cajas crezcan y se encojan, con un tamaño mínimo de 100px
+  flex: 1 0 150px;
+  height: 150px;
   display: flex;
-  align-items: center; // Centrar contenido verticalmente
-  justify-content: center; // Centrar contenido horizontalmente
-  width: 100px;
-  height: 100px;
+  align-items: center;
+  justify-content: center;
   color: white;
   font-weight: bold;
   text-align: center;
-  background-color: red;
+  border-radius: $border-radius1;
+  box-shadow:$box-shadow1;
+  transition: transform 0.3s, box-shadow 0.3s;
+  font-family: $font-family1;
+  -webkit-border-radius: $border-radius1;
+  -moz-border-radius: $border-radius1;
+  -ms-border-radius: $border-radius1;
+  -o-border-radius: $border-radius1;
 }
 
-// Ejemplo de paleta dinámica (opcional)
-// Puedes añadir la lógica de tu paleta de colores aquí si fuera necesario
-
-// Mixin para aplicar un esquema de color (opcional)
-@mixin apply-color-palette($container-class, $base-color) {
-  
+// Animación al pasar el ratón sobre las cajas
+.box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-// Define tu color base y aplica el mixin como se mostró en el ejemplo anterior
-// Define $base-color-container-1, $base-color-container-2, etc.
-// @include apply-color-palette(container-1, $base-color-container-1);
-// ...
+// Definición de colores base para cada contenedor
+$container-1-color: $base-color-1;
+$container-2-color: $base-color-2;
+$container-3-color: $base-color-3;
 
+// Aplicar colores al container-1
+.container-1 {
+  .darken-4 { @include darken-color($container-1-color, 40%); }
+  .darken-3 { @include darken-color($container-1-color, 30%); }
+  .darken-2 { @include darken-color($container-1-color, 20%); }
+  .darken-1 { @include darken-color($container-1-color, 10%); }
+  .base-color { background-color: $container-1-color; }
+  .lighten-1 { @include lighten-color($container-1-color, 10%); }
+  .lighten-2 { @include lighten-color($container-1-color, 20%); }
+  .lighten-3 { @include lighten-color($container-1-color, 30%); }
+  .lighten-4 { @include lighten-color($container-1-color, 40%); }
+}
+
+// Aplicar colores al container-2
+.container-2 {
+  .darken-4 { @include darken-color($container-2-color, 40%); }
+  .darken-3 { @include darken-color($container-2-color, 30%); }
+  .darken-2 { @include darken-color($container-2-color, 20%); }
+  .darken-1 { @include darken-color($container-2-color, 10%); }
+  .base-color { background-color: $container-2-color; }
+  .lighten-1 { @include lighten-color($container-2-color, 10%); }
+  .lighten-2 { @include lighten-color($container-2-color, 20%); }
+  .lighten-3 { @include lighten-color($container-2-color, 30%); }
+  .lighten-4 { @include lighten-color($container-2-color, 40%); }
+}
+
+// Aplicar colores al container-3
+.container-3 {
+  .darken-4 { @include darken-color($container-3-color, 40%); }
+  .darken-3 { @include darken-color($container-3-color, 30%); }
+  .darken-2 { @include darken-color($container-3-color, 20%); }
+  .darken-1 { @include darken-color($container-3-color, 10%); }
+  .base-color { background-color: $container-3-color; }
+  .lighten-1 { @include lighten-color($container-3-color, 10%); }
+  .lighten-2 { @include lighten-color($container-3-color, 20%); }
+  .lighten-3 { @include lighten-color($container-3-color, 30%); }
+  .lighten-4 { @include lighten-color($container-3-color, 40%); }
+}
+// Definición de gradientes de color para el texto
+$dark-text-color: #333; 
+$light-text-color: #fff; 
+
+.container-1, .container-2, .container-3 {
+  .darken-4 {
+    .color-box-text {
+      color: $light-text-color; 
+    }
+  }
+  .darken-3 {
+    .color-box-text {
+      color: lighten($dark-text-color, 20%); 
+    }
+  }
+  .darken-2 {
+    .color-box-text {
+      color: lighten($dark-text-color, 40%);
+    }
+  }
+  .darken-1 {
+    .color-box-text {
+      color: lighten($dark-text-color, 60%);
+    }
+  }
+  .base-color {
+    .color-box-text {
+      color: lighten($dark-text-color, 80%); 
+    }
+  }
+  .lighten-1 {
+    .color-box-text {
+      color: $dark-text-color; 
+    }
+  }
+  .lighten-2 {
+    .color-box-text {
+      color: darken($light-text-color, 20%);
+    }
+  }
+  .lighten-3 {
+    .color-box-text {
+      color: darken($light-text-color, 40%);
+    }
+  }
+  .lighten-4 {
+    .color-box-text {
+      color: darken($light-text-color, 60%);
+    }
+  }
+}
