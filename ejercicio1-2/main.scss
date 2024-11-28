@@ -1,50 +1,43 @@
-@import "variables";
+@import "style1";
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
+h1{
+  text-align: center;
+  margin: 100px 200px;
+  color: $base-color-1;
+}
+// Estilos globales para contenedores usando Flexbox
+.container {
+  display: flex;
+  flex-wrap: wrap; // Permitir que los elementos dentro del contenedor fluyan y se envuelvan
+  justify-content: space-between; // Distribuir espacio entre los elementos
+  margin-bottom: 30px;
+  gap: 10px;
+}
+
+// Estilos para cada caja dentro de los contenedores
+.box {
+  flex: 1 1 100px; // Permitir que las cajas crezcan y se encojan, con un tamaño mínimo de 100px
+  display: flex;
+  align-items: center; // Centrar contenido verticalmente
+  justify-content: center; // Centrar contenido horizontalmente
+  width: 100px;
+  height: 100px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  background-color: red;
+}
+
+// Ejemplo de paleta dinámica (opcional)
+// Puedes añadir la lógica de tu paleta de colores aquí si fuera necesario
+
+// Mixin para aplicar un esquema de color (opcional)
+@mixin apply-color-palette($container-class, $base-color) {
   
-  body {
-    font-family: Arial, sans-serif;
-    background-color: #ffffff;
-    padding: 20px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  // Contenedores
-  .container {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 30px;
-    gap: 10px;
-  }
-  
-  .container-1, .container-2, .container-3 {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  // Estilos de las cajas de color
-  .box {
-    width: 100px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    border-radius: 8px;
-    background-color: black;
-  }
-  
-  .color-box-text {
-    font-size: 12px;
-  }
+}
+
+// Define tu color base y aplica el mixin como se mostró en el ejemplo anterior
+// Define $base-color-container-1, $base-color-container-2, etc.
+// @include apply-color-palette(container-1, $base-color-container-1);
+// ...
+
